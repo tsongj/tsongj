@@ -48,7 +48,9 @@
           stroke-linecap="round"
           stroke-linejoin="round" />
 
-    <!-- 终端命令行方块光标 -->
-    <rect x="382" y="206" width="32" height="108" rx="6" fill="url(#cursorGrad)" />
+    <!-- 终端命令行方块光标（带呼吸闪烁动画） -->
+    <rect x="382" y="206" width="32" height="108" rx="6" fill="url(#cursorGrad)">
+      <animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite" />
+    </rect>
   </g>
 </svg>
