@@ -6,7 +6,6 @@
   <p><b>📐 数学竞赛教练 &nbsp;×&nbsp; 💻 AI 编程探索者 &nbsp;×&nbsp; ⚡ 自由职业者</b></p>
   <p><code>Pure Logic. Zero Small Talk. Keep Building.</code></p>
 </div>
-
 ---
 
 ### 🧠 About Me | 探索者画像
