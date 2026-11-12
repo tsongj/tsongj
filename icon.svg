@@ -1,26 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <defs>
-    <!-- 极客深邃暗黑背景渐变 -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<defs>
+    <!-- 深邃极客黑底板渐变 -->
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#141821" />
-      <stop offset="100%" stop-color="#090C10" />
+      <stop offset="100%" stop-color="#0B0E14" />
     </linearGradient>
 
-    <!-- 翡翠绿到电光蓝的曲线渐变 -->
-    <linearGradient id="curveGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+    <!-- 翡翠绿到电光蓝的流动渐变 -->
+    <linearGradient id="waveGrad" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#10B981" />
       <stop offset="50%" stop-color="#06B6D4" />
       <stop offset="100%" stop-color="#3B82F6" />
     </linearGradient>
 
-    <!-- 坐标轴网格图案 -->
-    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1E293B" stroke-width="0.8" />
-    </pattern>
+    <!-- 光标竖向渐变 -->
+    <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#0EA5E9" />
+    </linearGradient>
 
-    <!-- 曲线光点滤镜 -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+    <!-- 霓虹微光滤镜 -->
+    <filter id="neonGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -28,47 +29,26 @@
     </filter>
   </defs>
 
-  <!-- 圆角暗黑底板与数学网格 -->
-  <rect x="2" y="2" width="846" height="216" rx="18" fill="url(#bg)" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="2" y="2" width="846" height="216" rx="18" fill="url(#grid)" opacity="0.65" />
+  <!-- App 圆角矩形底板 -->
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#darkBg)" />
 
-  <!-- 左侧：坐标系主轴线 -->
-  <line x1="35" y1="110" x2="395" y2="110" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4" />
-  <line x1="215" y1="25" x2="215" y2="195" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4" />
+  <!-- 组合图形（应用整体霓虹微光） -->
+  <g filter="url(#neonGlow)">
+    <!-- 正弦波浪平滑过渡到无穷大符号（∞） -->
+    <path d="M 88 260
+             C 104 205, 128 205, 144 260
+             C 160 315, 184 315, 204 260
+             C 224 205, 256 205, 280 260
+             C 304 315, 348 315, 348 260
+             C 348 205, 304 205, 280 260
+             C 256 315, 224 315, 204 260"
+          fill="none"
+          stroke="url(#waveGrad)"
+          stroke-width="20"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
 
-  <!-- 左侧：微弱底影包络曲线 -->
-  <path d="M 40 110 C 65 35, 95 35, 120 110 C 145 185, 175 185, 200 110 C 225 45, 255 45, 280 110 C 305 175, 335 175, 360 110 C 375 70, 385 85, 390 110"
-        fill="none" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
-
-  <!-- 左侧：会自动循环绘制的亮色数学波浪曲线 -->
-  <path d="M 40 110 C 65 35, 95 35, 120 110 C 145 185, 175 185, 200 110 C 225 45, 255 45, 280 110 C 305 175, 335 175, 360 110 C 375 70, 385 85, 390 110"
-        fill="none" stroke="url(#curveGrad)" stroke-width="4.5" stroke-linecap="round"
-        filter="url(#glow)"
-        stroke-dasharray="580" stroke-dashoffset="580">
-    <animate attributeName="stroke-dashoffset" values="580;0;0;580" keyTimes="0;0.45;0.85;1" dur="5s" repeatCount="indefinite" />
-  </path>
-
-  <!-- 坐标系极简公式水印 -->
-  <text x="45" y="42" fill="#475569" font-family="monospace" font-size="12">f(x) = sin(ωx) · e^(-λx) + ∞</text>
-  <text x="45" y="192" fill="#334155" font-family="monospace" font-size="11">// MATH_OLYMPIAD × AI_CODING</text>
-
-  <!-- 中间分割线 -->
-  <line x1="425" y1="35" x2="425" y2="185" stroke="#1E293B" stroke-width="1.5" />
-
-  <!-- 右侧：你的专属主标题与闪烁光标 -->
-  <text x="460" y="96" fill="#F8FAFC" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, monospace" font-size="38" font-weight="700" letter-spacing="1">
-    tsongj
-  </text>
-  <!-- 紧跟名字的翡翠绿呼吸光标 -->
-  <rect x="605" y="66" width="12" height="36" rx="2" fill="#10B981">
-    <animate attributeName="opacity" values="1;0.1;1" dur="1.2s" repeatCount="indefinite" />
-  </rect>
-
-  <!-- 右侧：个人核心标签与极客签名 -->
-  <text x="460" y="134" fill="#10B981" font-family="monospace" font-size="15" font-weight="600">
-    📐 Math Olympiad  ×  💻 AI Explorer
-  </text>
-  <text x="460" y="164" fill="#94A3B8" font-family="monospace" font-size="13">
-    Pure Logic. Zero Small Talk. Keep Building.
-  </text>
+    <!-- 终端命令行方块光标 -->
+    <rect x="382" y="206" width="32" height="108" rx="6" fill="url(#cursorGrad)" />
+  </g>
 </svg>
