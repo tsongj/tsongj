@@ -1,9 +1,53 @@
 <div align="center">
-  <img src="./icon.svg" width="120" height="120" alt="My Icon" />
-  
-  ### Hi there 👋 我是专注于「数学竞赛」与「AI 编程」的独立探索者
-  
-  * 📐 **底层逻辑**：数学竞赛教练，热衷于拆解复杂问题与抽象建模
-  * 💻 **持续折腾**：正在用 AI 编程构建有趣的小工具，边学边忘，乐在其中
-  * ⚡ **个人信条**：远离无效社交，用代码与数学说话
+  <!-- 你的专属呼吸闪烁 SVG 图标 -->
+  <img src="./icon.svg" width="110" height="110" alt="tsongj icon" />
+
+  <!-- 动态极客打字机签名 -->
+  <p>
+    <img src="https://demolab.com." alt="Typing SVG" />
+  </p>
+
+  <!-- 核心标签徽章 -->
+  <p>
+    <img src="https://shields.io" />
+    <img src="https://shields.io" />
+    <img src="https://shields.io" />
+  </p>
+</div>
+
+---
+
+### 🧠 About Me | 探索者画像
+
+```yaml
+Role: 独立数学竞赛教练 / AI 编程折腾者
+Philosophy: 远离复杂人情世故，用纯粹的数学逻辑与代码对话
+Learning_Style: 边学边忘，持续迭代，永远对新事物保持好奇
+Current_Quest: 用数学建模思维驾驭 AI 编程，打造有趣且实用的小工具
+```
+
+### 🛠️ Tech & Exploration Stack | 折腾工具箱
+
+<div align="left">
+  <img src="https://shields.io" />
+  <img src="https://shields.io" />
+  <img src="https://shields.io" />
+  <img src="https://shields.io" />
+  <img src="https://shields.io" />
+</div>
+
+<br />
+
+### 📊 GitHub Telemetry | 代码折腾轨迹
+
+<div align="center">
+  <!-- 实时 GitHub 统计卡片（已自动绑定你的用户名 tsongj） -->
+  <img height="175em" src="https://vercel.app" />
+  <img height="175em" src="https://vercel.app" />
+</div>
+
+<br />
+
+<div align="center">
+  <sub><i>"遗忘的是表层语法，沉淀下来的是思维直觉与探索的勇气。"</i></sub>
 </div>
